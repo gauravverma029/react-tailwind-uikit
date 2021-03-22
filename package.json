@@ -19,10 +19,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "eject": "craco eject",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -53,6 +53,7 @@
     "@storybook/react": "^6.1.21",
     "@tailwindcss/postcss7-compat": "^2.0.4",
     "autoprefixer": "^9",
-    "postcss": "^7"
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "react-tailwind-uikit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Gaurav Verma",
   "description": "Tailwind CSS component Library For React Js and Next Js and Typescript Support.Still in progress please don't add in your project",
   "dependencies": {

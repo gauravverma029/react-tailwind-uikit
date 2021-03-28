@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "author": "Gaurav Verma",
   "description": "Tailwind CSS component Library For React Js and Next Js and Typescript Support.Still in progress please don't add in your project",
+  "homepage": "https://github.com/gauravverma029/react-tailwind-uikit",
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -54,6 +55,7 @@
     "@storybook/react": "^6.1.21",
     "@tailwindcss/postcss7-compat": "^2.0.4",
     "autoprefixer": "^9",
+    "gh-pages": "^3.1.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }

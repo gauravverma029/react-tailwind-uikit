@@ -1,48 +1,78 @@
-# Getting Started with Create React App
+# Get started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React-tailwind-uikit is a reusable component library that helps to build UIs faster for React Js , Next js Web Projects and Supports TypeScript. The goal is to make building durable UIs more productive and satisfying.
+Now you can Build your Web Application in 24 Hours.We are coming with more 100 component Ready to Implement.Please Support us.
 
-## Available Scripts
+## Install
 
-In the project directory, you can run:
+Components are written in React,Typescript,Tailwind CSS.
 
-### `yarn start`
+Add Project to your project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`npm install --save react-tailwind-uikit`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-Doc for Setup Eslint
-https://www.meidev.co/blog/visual-studio-code-css-linting-with-tailwind/
+or
 
-### `yarn test`
+`yarn add react-tailwind-uikit`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **Use**
 
-### `yarn build`
+Import components you want into your Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`import { Button, ButtonProps} from 'react-tailwind-uikit';`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+and use them like so
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+  const example = () => (
+    <div>
+      <Button content='Button'>
+    </div>
+  )
 
-### `yarn eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### **With SVG Button**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+const YourComponentWithSVG = () => {
+  return (
+    <React.Fragment>
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 mx-2" viewBox="0 0 20 20" fill="currentColor">
+        <path
+          fillRule="evenodd"
+          d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z"
+          clipRule="evenodd"
+        />
+      </svg>
+      <div>Button</div>
+    </React.Fragment>
+  );
+};
+  const example = () => (
+    <div>
+      <Button content={<YourComponentWithSVG />}>
+    </div>
+  )
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### **Browse SDS components in your own Storybook**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Once you add the package, update your .storybook/config.js to import all files ending in .stories.js.
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+import { configure } from "@storybook/react";
+configure(require.context("../src", true, /.stories.js\$/), module);
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+
+### **Welcome For Contributes**
+
+Clone the [GitHub project](https://github.com/gauravverma029/react-tailwind-uikit) then start Storybook.
+
+`yarn && yarn storybook`
+
+### **WHO AM I**
+
+[LinkedIn Profile](https://www.linkedin.com/in/gauravverma029/)

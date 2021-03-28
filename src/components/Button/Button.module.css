@@ -1,0 +1,9 @@
+.__ui_btn_text > div {
+  @apply w-full;
+}
+.__ui_btn_svg svg {
+  @apply h-4 mx-2;
+}
+.__ui_btn_random {
+  @apply bg-gray-900;
+}

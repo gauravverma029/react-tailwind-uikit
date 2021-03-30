@@ -3,3 +3,10 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.__ui_btn_text {
+  @apply bg-gray-300 shadow-lg bg-fixed max-h-64;
+}
+.__ui_btn_svg svg {
+  @apply h-4 mx-3;
+}

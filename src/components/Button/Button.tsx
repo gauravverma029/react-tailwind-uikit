@@ -1,6 +1,4 @@
 import React, { ReactNode } from "react";
-import mc from "./Button.module.css";
-import "../../tailwind.css";
 
 import { cn } from "../../global";
 
@@ -80,7 +78,7 @@ interface BUTTON_SIZE_MAPS_PROPS {
 }
 
 const BUTTON_VARIANT_MAPS: BUTTON_VARIANT_MAPS_PROPS = {
-  default: "shadow bg-blue-600 text-white hover:bg-blue-700",
+  default: "__ui_btn_text",
   primary: "shadow bg-primary text-white hover:bg-primary5",
   secondary: "shadow bg-gray1 text-white hover:bg-gray1",
   success: "shadow bg-green-600 text-white hover:bg-green-700",
@@ -134,8 +132,8 @@ const Button: React.FC<ButtonProps> = ({
             BUTTON_SIZE_MAPS[size],
             `text-${fontsize}`,
             svgIconValue ? `inline-flex flex-row justify-${svgSpace}` : "",
-            svgIconValue && svgSpace === "center-text-right-icon" ? `justify-between ${mc.__ui_btn_svg}` : "",
-            svgIconValue && svgSpace === "center-text-left-icon" ? `justify-between ${mc.__ui_btn_text}` : "",
+            svgIconValue && svgSpace === "center-text-right-icon" ? `justify-between ui_btn_svg` : "",
+            svgIconValue && svgSpace === "center-text-left-icon" ? `justify-between ui_btn_text` : "",
             css
           )}
           {...props}
@@ -151,8 +149,8 @@ const Button: React.FC<ButtonProps> = ({
             BUTTON_SIZE_MAPS[size],
             `text-${fontsize}`,
             svgIconValue ? `inline-flex flex-row justify-${svgSpace}` : "",
-            svgIconValue && svgSpace === "center-text-left-icon" ? `justify-between ${mc.__ui_btn_svg}` : "",
-            svgIconValue && svgSpace === "center-text-right-icon" ? `justify-between ${mc.__ui_btn_text}` : "",
+            svgIconValue && svgSpace === "center-text-left-icon" ? `justify-between __ui_btn_svg` : "",
+            svgIconValue && svgSpace === "center-text-right-icon" ? `justify-between __ui_btn_text` : "",
             css
           )}
           {...props}

@@ -2,31 +2,38 @@
   "name": "react-tailwind-uikit",
   "version": "0.1.2",
   "author": "Gaurav Verma",
-  "description": "Tailwind CSS component Library For React Js and Next Js and Typescript Support.Still in progress please don't add in your project",
+  "description": "React-tailwind-uikit is a reusable component library that helps to build UIs faster for React Js , Next js Web Projects and Supports TypeScript. The goal is to make building durable UIs more productive and satisfying.",
   "homepage": "https://github.com/gauravverma029/react-tailwind-uikit",
-  "dependencies": {
-    "@craco/craco": "^6.1.1",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.3",
-    "stylelint-config-recommended": "^4.0.0",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+  "bugs": {
+    "url": "https://github.com/gauravverma029/react-tailwind-uikit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauravverma029/react-tailwind-uikit"
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist/*"
+  ],
+  "license": "MIT",
+  "typings": "typings/index.d.ts",
+  "dependencies": {},
+  "storybook-deployer": {
+    "gitUsername": "gauravverma029",
+    "gitEmail": "gauravverma029@gmail.com",
+    "commitMessage": "Deploy Storybook to GitHub Pages"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "start": "rollup -c -w",
+    "build": "rollup -c",
+    "build:tailwind": "npx tailwindcss build src/tailwind.css -o .storybook/styles.css -c tailwind.config.js",
+    "storybook": "NODE_ENV=development start-storybook -p 6006",
+    "build-storybook": "NODE_ENV=production yarn clean-storybook-static && yarn build:tailwind && build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
+    "clean-dist": "shx rm -rf dist",
+    "clean-storybook-static": "shx rm -rf stsorybook-static",
+    "prepublishOnly": "npm run clean-dist && yarn build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,17 +53,53 @@
       "last 1 safari version"
     ]
   },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
   "devDependencies": {
+    "@craco/craco": "^6.1.1",
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "@rollup/plugin-typescript": "^8.2.1",
     "@storybook/addon-actions": "^6.1.21",
     "@storybook/addon-essentials": "^6.1.21",
     "@storybook/addon-links": "^6.1.21",
     "@storybook/node-logger": "^6.1.21",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.1.21",
+    "@storybook/storybook-deployer": "^2.8.7",
     "@tailwindcss/postcss7-compat": "^2.0.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "add": "^2.0.6",
     "autoprefixer": "^9",
     "gh-pages": "^3.1.0",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "path": "^0.12.7",
+    "postcss": "^8.0.8",
+    "postcss-import": "^12.0.1",
+    "postcss-modules": "^3.2.2",
+    "postcss-preset-env": "^6.7.0",
+    "purgecss": "^3.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "rollup": "^2.44.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "stylelint-config-recommended": "^4.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1",
+    "yarn": "^1.22.10",
+    "cssnano": "^4.1.10",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "shx": "^0.3.3",
+    "ts-node": "^9.1.1"
   }
 }

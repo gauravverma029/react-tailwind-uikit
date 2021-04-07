@@ -1,0 +1,6 @@
+.ui_btn_text {
+  @apply bg-gray-500 shadow-lg bg-fixed max-h-64;
+}
+.ui_btn_svg svg {
+  @apply h-4 mx-3;
+}

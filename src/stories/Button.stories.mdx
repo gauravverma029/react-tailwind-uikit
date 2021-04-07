@@ -1,0 +1,19 @@
+<!--- Checkbox.stories.mdx -->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Button, ButtonProps } from "../index";
+
+<Meta title="Components/Button" component={Button} />
+export const Template = (args) => <Button {...args} />;
+
+# Checkbox
+
+<Story name="warning" args={{ content: "warning" }}>
+  {Template.bind({})}
+</Story>
+<Story name="neutral" args={{ content: "neutral" }}>
+  {Template.bind({})}
+</Story>
+<Story name="error" args={{ content: "error" }}>
+  {Template.bind({})}
+</Story>

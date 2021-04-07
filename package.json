@@ -1,6 +1,6 @@
 {
   "name": "react-tailwind-uikit",
-  "version": "0.1.2",
+  "version": "0.1.6",
   "author": "Gaurav Verma",
   "description": "React-tailwind-uikit is a reusable component library that helps to build UIs faster for React Js , Next js Web Projects and Supports TypeScript. The goal is to make building durable UIs more productive and satisfying.",
   "homepage": "https://github.com/gauravverma029/react-tailwind-uikit",
@@ -18,7 +18,10 @@
   ],
   "license": "MIT",
   "typings": "typings/index.d.ts",
-  "dependencies": {},
+  "dependencies": {
+    "@storybook/theming": "^6.2.2",
+    "react-syntax-highlighter": "^15.4.3"
+  },
   "storybook-deployer": {
     "gitUsername": "gauravverma029",
     "gitEmail": "gauravverma029@gmail.com",
@@ -27,9 +30,10 @@
   "scripts": {
     "start": "rollup -c -w",
     "build": "rollup -c",
-    "build:tailwind": "npx tailwindcss build src/tailwind.css -o .storybook/styles.css -c tailwind.config.js",
+    "build:tailwind": "npx tailwindcss build src/tailwind.css -o .storybook/tailwind.css -c tailwind.config.js",
+    "build:customcss": "npx tailwindcss build src/styles.css -o .storybook/styles.css -c tailwind.config.js",
     "storybook": "NODE_ENV=development start-storybook -p 6006",
-    "build-storybook": "NODE_ENV=production yarn clean-storybook-static && yarn build:tailwind && build-storybook",
+    "build-storybook": "NODE_ENV=production yarn clean-storybook-static && yarn build:tailwind && yarn build:customcss && build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "clean-dist": "shx rm -rf dist",
     "clean-storybook-static": "shx rm -rf stsorybook-static",
@@ -79,6 +83,7 @@
     "@types/react-dom": "^17.0.0",
     "add": "^2.0.6",
     "autoprefixer": "^9",
+    "cssnano": "^4.1.10",
     "gh-pages": "^3.1.0",
     "path": "^0.12.7",
     "postcss": "^8.0.8",
@@ -90,16 +95,15 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
     "rollup": "^2.44.0",
-    "rollup-plugin-postcss": "^4.0.0",
-    "stylelint-config-recommended": "^4.0.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1",
-    "yarn": "^1.22.10",
-    "cssnano": "^4.1.10",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-typescript2": "^0.30.0",
     "shx": "^0.3.3",
-    "ts-node": "^9.1.1"
+    "stylelint-config-recommended": "^4.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1",
+    "yarn": "^1.22.10"
   }
 }

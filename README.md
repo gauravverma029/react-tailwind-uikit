@@ -10,13 +10,13 @@
 <img alt="TailwindCSS" src="https://img.shields.io/badge/tailwindcss%20-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white"/>
 <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
 
-<img alt="TailwindCSS" src="https://raw.githubusercontent.com/gauravverma029/react-tailwind-uikit/design.png"/>
+<img alt="TailwindCSS" src="https://raw.githubusercontent.com/gauravverma029/react-tailwind-uikit/main/design.png"/>
 
 ## About
 
 React-tailwind-uikit is a reusable component library that helps to build UIs faster for React Js , Next js Web Projects and Supports TypeScript. The goal is to make building durable UIs more productive and satisfying. Now you can Build your Web Application in 24 Hours.We are coming with more 100 component Ready to Implement.Please Support us.
 
-### **[Story Book](https://gauravverma029.github.io/react-tailwind-uikit/)**
+### **[Documentation](https://gauravverma029.github.io/react-tailwind-uikit/)**
 
 ## Features
 

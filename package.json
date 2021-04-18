@@ -1,9 +1,9 @@
 {
   "name": "react-tailwind-uikit",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "Gaurav Verma",
   "description": "React-tailwind-uikit is a reusable component library that helps to build UIs faster for React Js , Next js Web Projects and Supports TypeScript. The goal is to make building durable UIs more productive and satisfying.",
-  "homepage": "https://github.com/gauravverma029/react-tailwind-uikit",
+  "homepage": "https://gauravverma029.github.io/react-tailwind-uikit/",
   "bugs": {
     "url": "https://github.com/gauravverma029/react-tailwind-uikit/issues"
   },

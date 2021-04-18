@@ -24,17 +24,6 @@ module.exports = {
         boxShadow4: "-3px 7px 8px -4px rgba(204, 208, 209, 1)",
         boxShadowInput: "0 4px 8px rgba(0, 0, 0, 0.15)",
       },
-      fontSize: {
-        fontSizeHeadlineXLarge: "calc(( 40 / 14 ) * 1em)",
-        fontSizeHeadlineLarge: "calc(( 32 / 14 ) * 1em)",
-        fontSizeHeadlineMedium: "calc(( 27 / 14 ) * 1em)",
-        fontSizeHeadlineSmall: "calc(( 24 / 14 ) * 1em)",
-        fontSizeParagraph: "calc(( 20 / 14 ) * 1em)",
-        fontSizeRegular: "calc(( 16 / 14 ) * 1em)",
-        fontSizeMedium: "calc(( 14 / 14 ) * 1em)",
-        fontSizeSmall: "calc(( 12 / 14 ) * 1em)",
-        fontSizeXSmall: "calc(( 10 / 14 ) * 1em)",
-      },
       colors: {
         black: "#000000",
         white: "#FFFFFF",

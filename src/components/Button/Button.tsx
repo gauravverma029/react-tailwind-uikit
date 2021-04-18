@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 import { cn } from "../../global";
 
@@ -10,22 +10,27 @@ export interface ButtonProps {
   /**
    * Target anchor link
    */
-  target?: string;
+  target?: "_blank" | "_self" | "_parent" | "_top";
   /**
    * How large Font should the button be?
    */
-  fontsize?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
+  fontsize?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl";
+  /**
+   * How large Font should the button be?
+   */
+  textTransform?: "normal-case" | "uppercase" | "capitalize" | "lowercase";
   /**
    * How large Button should the button be?
    */
-  size?: "xs" | "auto" | "sm" | "base" | "lg" | "xl" | "xxl" | "exl" | "90w" | "75w" | "50w" | "80w" | "full";
+  size?: "auto" | "lg" | "xl" | "xxl" | "exl" | "90w" | "75w" | "50w" | "80w" | "full";
 
   /**
    * How variant should the button be?
    */
   variant?:
     | "default"
-    | "primary"
+    | "text-link"
+    | "underlineTextLink"
     | "secondary"
     | "success"
     | "danger"
@@ -40,23 +45,19 @@ export interface ButtonProps {
     | "dark-outline";
 
   /**
-   * Button contents
+   * Button disabled
    */
   disabled?: boolean;
   /**
-   * contents
+   * Set Position between Button Text and Icon
    */
-  content?: ReactNode;
+  iconPosition?: "start" | "end" | "center" | "between" | "around" | "evenly" | "center-text-right-icon" | "center-text-left-icon";
   /**
-   * Background Color
+   * Make True if Icon Added with Button
    */
-  svgSpace?: "start" | "end" | "center" | "between" | "around" | "evenly" | "center-text-right-icon" | "center-text-left-icon";
+  icon?: boolean;
   /**
-   * Space Between svg and Content Text
-   */
-  svgIconValue?: boolean;
-  /**
-   * Add Custom Css - Pass Class Name or tailwind Css
+   * Add Custom Css - Pass class Name or tailwind Css  (Eg. btn_custom)
    */
   css?: string;
   /**
@@ -78,8 +79,9 @@ interface BUTTON_SIZE_MAPS_PROPS {
 }
 
 const BUTTON_VARIANT_MAPS: BUTTON_VARIANT_MAPS_PROPS = {
-  default: "ui_btn_text",
-  primary: "shadow bg-primary text-white hover:bg-primary5",
+  default: "ui_default_btn_text",
+  "text-link": "ui_btn_text_link",
+  underlineTextLink: "ui_btn_underline_text_link",
   secondary: "shadow bg-gray1 text-white hover:bg-gray1",
   success: "shadow bg-green-600 text-white hover:bg-green-700",
   danger: "shadow bg-red-600 text-white hover:bg-red-700",
@@ -96,7 +98,7 @@ const BUTTON_VARIANT_MAPS: BUTTON_VARIANT_MAPS_PROPS = {
 
 const BUTTON_SIZE_MAPS: BUTTON_SIZE_MAPS_PROPS = {
   xs: "p-1 w-1",
-  auto: "p-1.5 w-auto",
+  auto: "p-2 w-auto",
   sm: "p-1.5 w-4",
   base: "p-1.5 w-12",
   lg: "p-2 w-24",
@@ -115,10 +117,12 @@ const Button: React.FC<ButtonProps> = ({
   variant = "default",
   fontsize = "base",
   size = "auto",
-  svgSpace = "",
-  svgIconValue = false,
-  content,
+  iconPosition = "",
+  icon = false,
   css,
+  children,
+  textTransform = "normal-case",
+  target = "_blank",
   ...props
 }) => {
   return (
@@ -126,36 +130,43 @@ const Button: React.FC<ButtonProps> = ({
       {href ? (
         <a
           href={href}
+          target={target}
           className={cn(
-            "inline-block items-center whitespace-no-wrap font-normal align-middle text-base rounded-sm p-1.5 w-16 text-center",
+            "ui_btn",
             BUTTON_VARIANT_MAPS[variant],
             BUTTON_SIZE_MAPS[size],
             `text-${fontsize}`,
-            svgIconValue ? `inline-flex flex-row justify-${svgSpace}` : "",
-            svgIconValue && svgSpace === "center-text-right-icon" ? `justify-between ui_btn_svg` : "",
-            svgIconValue && svgSpace === "center-text-left-icon" ? `justify-between ui_btn_text` : "",
+            icon ? `inline-flex flex-row justify-${iconPosition}` : "",
+            icon && iconPosition === "center-text-right-icon" ? `justify-between ui_btn_svg` : "",
+            icon && iconPosition === "center-text-left-icon" ? `justify-between ui_btn_svg` : "",
+            textTransform && `${textTransform}`,
             css
           )}
           {...props}
         >
-          {content}
+          {children}
         </a>
       ) : (
         <button
           type="button"
           className={cn(
-            "inline-block items-center whitespace-no-wrap font-normal align-middle text-base rounded-sm p-1.5 w-16 text-center",
+            "ui_btn",
             BUTTON_VARIANT_MAPS[variant],
             BUTTON_SIZE_MAPS[size],
             `text-${fontsize}`,
-            svgIconValue ? `inline-flex flex-row justify-${svgSpace}` : "",
-            svgIconValue && svgSpace === "center-text-left-icon" ? `justify-between ui_btn_svg` : "",
-            svgIconValue && svgSpace === "center-text-right-icon" ? `justify-between ui_btn_text` : "",
+            icon ? `inline-flex flex-row justify-${iconPosition}` : "",
+            icon && iconPosition === "center-text-left-icon"
+              ? `group inline-flex items-center py-2 px-4 bg-amber-500 text-white font-semibold rounded-lg shadow-md focus:bg-amber-600 focus:outline-none`
+              : "",
+            icon && iconPosition === "center-text-right-icon"
+              ? `group inline-flex items-center py-2 px-4 bg-amber-500 text-white font-semibold rounded-lg shadow-md focus:bg-amber-600 focus:outline-none`
+              : "",
+            textTransform && `${textTransform}`,
             css
           )}
           {...props}
         >
-          {content}
+          {children}
         </button>
       )}
     </React.Fragment>

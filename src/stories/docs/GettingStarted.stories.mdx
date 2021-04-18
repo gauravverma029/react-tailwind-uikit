@@ -6,44 +6,24 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 ## Installing
 
-You can install REAVIZ with [NPM](https://www.npmjs.com/package/reaviz) or Yarn.
+You can install react-tailwind-uikit with [NPM](https://www.npmjs.com/package/react-tailwind-uikit) or Yarn.
 
-- NPM: `npm install reaviz --save`
-- YARN: `yarn add reaviz`
+- NPM: `npm install --save react-tailwind-uikit`
+- YARN: `yarn add react-tailwind-uikit`
 
 ## Configuration
 
-To customize various elements in the charts,
-we use [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables).
-This gives you fine grain control over the styles
-that is native to the browser. The color variables are:
+For Basic Configuration in your project follow these steps [Installing Steps](https://tailwindcss.com/docs/installation) According to your next js or react js Project
 
-- `--color-background`
-- `--color-on-background`
-- `--color-tooltip`
-- `--color-on-tooltip`
-- `--color-handle`
-- `--color-handle-drag`
+Then Simple Example will take for Button
+```
+import { Button } from "react-tailwind-uikit";
 
-These names are based on the Google Material design spec. These variables
-are not setup when you install the project automatically but if you want
-some sensible defaults here is what we use in the Storybook demo:
-
-```html
-<style>
-  body {
-    --color-background: rgb(51, 51, 51);
-    --color-on-background: #fff;
-
-    --color-tooltip: rgba(0, 5, 11, 0.9);
-    --color-on-tooltip: #fff;
-
-    --color-handle: #67c2e4;
-    --color-handle-drag: #2c343a;
-  }
-</style>
+export default () => (
+    <Button>Submit</Button>
+);
 ```
 
 ## Compatibility
 
-REAVIZ is compatible with React v16+ and works with ReactDOM. React Native is not supported at this time.
+react-tailwind-uikit is compatible with React v16+ and works with ReactDOM. React Native is not supported at this time.It will support nextjs Project also.This framework used tailwind css , Typescript ,React js .

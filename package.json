@@ -16,6 +16,17 @@
   "files": [
     "dist/*"
   ],
+  "keywords": [
+    "tailwind",
+    "uikit",
+    "npm",
+    "package",
+    "react",
+    "nextjs",
+    "nextjs ui",
+    "reactjs uikit",
+    "tailwind uikit"
+  ],
   "license": "MIT",
   "typings": "typings/index.d.ts",
   "dependencies": {

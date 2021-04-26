@@ -1,0 +1,311 @@
+/* Button Component css */
+
+.primary-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(241, 245, 250, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.primary-100 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(215, 226, 241, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.primary-200 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(188, 207, 232, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.primary-300 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(160, 189, 222, var(--tw-bg-opacity)) !important;
+}
+
+.primary-400 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(132, 170, 213, var(--tw-bg-opacity)) !important;
+}
+
+.primary-500 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(102, 153, 204, var(--tw-bg-opacity)) !important;
+}
+
+.primary-600 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(92, 138, 185, var(--tw-bg-opacity)) !important;
+}
+
+.primary-700 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(83, 125, 166, var(--tw-bg-opacity)) !important;
+}
+
+.primary-800 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(74, 110, 147, var(--tw-bg-opacity)) !important;
+}
+
+.primary-900 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(65, 98, 130, var(--tw-bg-opacity)) !important;
+}
+
+.primary-1000 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(56, 84, 112, var(--tw-bg-opacity)) !important;
+}
+
+.success-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(235, 249, 237, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.success-100 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(226, 246, 229, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.success-200 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(207, 241, 213, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.success-300 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(189, 235, 196, var(--tw-bg-opacity)) !important;
+}
+
+.success-400 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(170, 229, 180, var(--tw-bg-opacity)) !important;
+}
+
+.success-500 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(43, 192, 73, var(--tw-bg-opacity)) !important;
+}
+
+.success-600 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(62, 149, 80, var(--tw-bg-opacity)) !important;
+}
+
+.success-700 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(103, 154, 114, var(--tw-bg-opacity)) !important;
+}
+
+.success-800 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(82, 121, 90, var(--tw-bg-opacity)) !important;
+}
+
+.success-900 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(82, 121, 90, var(--tw-bg-opacity)) !important;
+}
+
+.success-1000 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(41, 61, 45, var(--tw-bg-opacity)) !important;
+}
+
+.warning-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(254, 252, 238, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.warning-100 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 248, 209, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.warning-200 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 244, 180, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.warning-300 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 240, 149, var(--tw-bg-opacity)) !important;
+}
+
+.warning-400 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 236, 118, var(--tw-bg-opacity)) !important;
+}
+
+.warning-500 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(253, 231, 76, var(--tw-bg-opacity)) !important;
+}
+
+.warning-600 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(221, 202, 67, var(--tw-bg-opacity)) !important;
+}
+
+.warning-700 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(190, 173, 58, var(--tw-bg-opacity)) !important;
+}
+
+.warning-800 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(159, 145, 48, var(--tw-bg-opacity)) !important;
+}
+
+.warning-900 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(159, 145, 48, var(--tw-bg-opacity)) !important;
+}
+
+.warning-1000 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(102, 93, 31, var(--tw-bg-opacity)) !important;
+}
+
+.danger-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(254, 242, 241, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.danger-100 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 218, 214, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.danger-200 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 195, 188, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.danger-300 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 170, 161, var(--tw-bg-opacity)) !important;
+}
+
+.danger-400 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 144, 135, var(--tw-bg-opacity)) !important;
+}
+
+.danger-500 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(253, 116, 108, var(--tw-bg-opacity)) !important;
+}
+
+.danger-600 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(213, 98, 91, var(--tw-bg-opacity)) !important;
+}
+
+.danger-700 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(175, 80, 75, var(--tw-bg-opacity)) !important;
+}
+
+.danger-800 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(137, 64, 59, var(--tw-bg-opacity)) !important;
+}
+
+.danger-900 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(137, 64, 59, var(--tw-bg-opacity)) !important;
+}
+
+.danger-1000 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(69, 32, 30, var(--tw-bg-opacity)) !important;
+}
+
+.gray-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(247, 247, 247, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.gray-100 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(241, 241, 241, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.gray-200 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(235, 235, 235, var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgba(41, 61, 45, var(--tw-text-opacity)) !important;
+}
+
+.gray-300 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(210, 210, 210, var(--tw-bg-opacity)) !important;
+}
+
+.gray-400 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(178, 178, 178, var(--tw-bg-opacity)) !important;
+}
+
+.gray-500 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(129, 129, 129, var(--tw-bg-opacity)) !important;
+}
+
+.gray-600 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(97, 97, 97, var(--tw-bg-opacity)) !important;
+}
+
+.gray-700 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(72, 72, 72, var(--tw-bg-opacity)) !important;
+}
+
+.gray-800 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(56, 56, 56, var(--tw-bg-opacity)) !important;
+}
+
+.gray-900 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(33, 33, 33, var(--tw-bg-opacity)) !important;
+}
+
+.white {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity)) !important;
+}
+
+.black {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity)) !important;
+}

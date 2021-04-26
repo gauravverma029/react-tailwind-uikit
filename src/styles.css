@@ -1,80 +1,13 @@
-/* Button Component */
-:root {
-  --color-primary1: #385470;
-  --color-primary2: "#416282";
-  --color-primary3: "#4A6E93";
-  --color-primary4: "#537DA6";
-  --color-primary5: "#5C8AB9";
-  --color-primary: "#6699CC";
-  --color-primary7: "#84AAD5";
-  --color-primary8: "#A0BDDE";
-  --color-primary9: "#BCCFE8";
-  --color-primary10: "#D7E2F1";
-  --color-primary11: "#F1F5FA";
-  --color-black: "#000000";
-  --color-white: "#FFFFFF";
-  --color-gray1: "#212121";
-  --color-gray2: "#484848";
-  --color-gray3: "#616161";
-  --color-gray4: "#B2B2B2";
-  --color-gray5: "#D2D2D2";
-  --color-gray6: "#EBEBEB";
-  --color-gray7: "#F7F7F7";
-
-  --color-success1: "#293D2D";
-  --color-success2: "#3D5A43";
-  --color-success3: "#52795A";
-  --color-success4: "#679A72";
-  --color-success5: "#7DBC8A";
-  --color-success: "#95DFA4";
-  --color-success7: "#AAE5B4";
-  --color-success8: "#BDEBC4";
-  --color-success9: "#CFF1D5";
-  --color-success10: "#E2F6E5";
-  --color-success11: "#EBF9ED";
-
-  --color-successAlt: "#2BC049";
-
-  --color-danger1: "#45201E";
-  --color-danger2: "#66302C";
-  --color-danger3: "#89403B";
-  --color-danger4: "#AF504B";
-  --color-danger5: "#D5625B";
-  --color-danger: "#FD746C";
-  --color-danger7: "#FF9087";
-  --color-danger8: "#FFAAA1";
-  --color-danger9: "#FFC3BC";
-  --color-danger10: "#FFDAD6";
-  --color-danger11: "#FEF2F1";
-
-  --color-warning1: "#665D1F";
-  --color-warning2: "#827628";
-  --color-warning3: "#9F9130";
-  --color-warning4: "#BEAD3A";
-  --color-warning5: "#DDCA43";
-  --color-warning: "#FDE74C";
-  --color-warning7: "#FFEC76";
-  --color-warning8: "#FFF095";
-  --color-warning9: "#FFF4B4";
-  --color-warning10: "#FFF8D1";
-  --color-warning11: "#FEFCEE";
-}
-
 /* Button Component css */
-.ui_btn {
-  @apply group font-sans space-y-0 items-center whitespace-nowrap align-middle rounded-sm p-2 text-center cursor-pointer shadow-sm ease-in-out select-none focus:outline-none font-bold truncate;
-}
 .ui_btn:hover {
   box-shadow: rgb(215 226 241) 0px 5px 16px;
 }
-.ui_default_btn_text {
-  @apply bg-primary border border-primary text-white;
-}
+
 .ui_btn_text_link {
-  @apply bg-transparent border-0 shadow-none text-primary;
+  @apply bg-transparent border-0 shadow-none text-primary-500 font-normal;
 }
 .ui_btn_underline_text_link {
-  @apply bg-transparent border-0 shadow-none underline text-primary;
+  @apply bg-transparent border-0 shadow-none underline text-primary-500 font-normal;
 }
 .ui_btn_text_link:hover {
   box-shadow: none;
@@ -84,4 +17,91 @@
 }
 .ui_btn_svg svg {
   @apply h-4 mx-3;
+}
+.ui_btn_pb {
+  @apply bg-primary-500 text-white text-base font-bold;
+}
+.ui_btn_pb:hover {
+  @apply bg-primary-600;
+}
+
+.ui_btn_pob {
+  @apply border-primary-500 border bg-transparent text-primary-500 text-base font-normal;
+}
+.ui_btn_pob:hover {
+  @apply bg-primary-50;
+}
+
+.ui_btn_sob {
+  @apply border-gray-500 border bg-transparent text-gray-900 text-base font-normal;
+}
+
+.ui_btn_suc-b {
+  @apply bg-success-500 text-white text-base font-bold;
+}
+.ui_btn_suc-b:hover {
+  @apply bg-success-600;
+}
+
+.ui_btn_suc-ob {
+  @apply border-success-500 border bg-transparent text-success-500 text-base font-normal;
+}
+.ui_btn_suc-ob:hover {
+  @apply text-success-600;
+}
+
+.ui_btn_wb {
+  @apply bg-warning-500 text-white text-base font-bold;
+}
+.ui_btn_wb:hover {
+  @apply bg-warning-600;
+}
+
+.ui_btn_wob {
+  @apply border-warning-500 border bg-transparent text-warning-500 text-base font-normal;
+}
+.ui_btn_wob:hover {
+  @apply text-warning-600;
+}
+
+.ui_btn_db {
+  @apply bg-danger-500 text-white text-base font-bold;
+}
+.ui_btn_db:hover {
+  @apply bg-danger-600;
+}
+
+.ui_btn_dob {
+  @apply border-danger-500 border bg-transparent text-danger-500 text-base font-normal;
+}
+.ui_btn_dob:hover {
+  @apply text-danger-600;
+}
+
+.ui_btn_disabled {
+  @apply bg-gray-400 text-white text-base font-bold;
+}
+.ui_btn_disabled:hover {
+  @apply bg-gray-500;
+}
+
+.ui_btn_dab {
+  @apply bg-gray-900 text-white text-base font-bold;
+}
+.ui_btn_dab:hover {
+  @apply bg-gray-900;
+}
+
+.ui_btn_daob {
+  @apply border-gray-900 border bg-transparent text-gray-900 text-base font-normal;
+}
+
+.ui_btn_hollow {
+  @apply border-dashed !important;
+}
+.ui_btn_light {
+  @apply bg-white text-gray-900;
+}
+.ui_btn_link {
+  @apply bg-white text-gray-900;
 }

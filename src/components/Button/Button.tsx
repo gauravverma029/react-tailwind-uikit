@@ -14,35 +14,47 @@ export interface ButtonProps {
   /**
    * How large Font should the button be?
    */
-  fontsize?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl";
-  /**
-   * How large Font should the button be?
-   */
   textTransform?: "normal-case" | "uppercase" | "capitalize" | "lowercase";
   /**
-   * How large Button should the button be?
+   * How Width Button should the button be?
    */
-  size?: "auto" | "lg" | "xl" | "xxl" | "exl" | "90w" | "75w" | "50w" | "80w" | "full";
-
+  size?:
+    | "auto"
+    | "w-screen"
+    | "w-full"
+    | "w-32"
+    | "w-36"
+    | "w-40"
+    | "w-44"
+    | "w-48"
+    | "w-52"
+    | "w-56"
+    | "w-60"
+    | "w-64"
+    | "w-72"
+    | "w-80"
+    | "w-96";
+  /**
+   * How Border Radius should the button be?
+   */
+  borderRadius?:
+    | "rounded-none"
+    | "rounded-sm"
+    | "rounded"
+    | "rounded-md"
+    | "rounded-lg"
+    | "rounded-xl"
+    | "rounded-2xl"
+    | "rounded-3xl"
+    | "rounded-full";
   /**
    * How variant should the button be?
    */
-  variant?:
-    | "default"
-    | "text-link"
-    | "underlineTextLink"
-    | "secondary"
-    | "success"
-    | "danger"
-    | "light"
-    | "dark"
-    | "disabled"
-    | "default-outline"
-    | "p-outline"
-    | "s-outline"
-    | "success-outline"
-    | "d-outline"
-    | "dark-outline";
+  variant?: "pb" | "pob" | "suc-b" | "suc-ob" | "sob" | "wb" | "wob" | "db" | "dob" | "dab" | "daob" | "disabled" | "light";
+  /**
+   * Hollow Border Dotted
+   */
+  hollow?: boolean;
 
   /**
    * Button disabled
@@ -79,50 +91,53 @@ interface BUTTON_SIZE_MAPS_PROPS {
 }
 
 const BUTTON_VARIANT_MAPS: BUTTON_VARIANT_MAPS_PROPS = {
-  default: "ui_default_btn_text",
-  "text-link": "ui_btn_text_link",
-  underlineTextLink: "ui_btn_underline_text_link",
-  secondary: "shadow bg-gray1 text-white hover:bg-gray1",
-  success: "shadow bg-green-600 text-white hover:bg-green-700",
-  danger: "shadow bg-red-600 text-white hover:bg-red-700",
-  light: "shadow bg-gray-100 text-gray-900 hover:bg-gray-200",
-  dark: "shadow bg-gray-900 text-white hover:bg-gray-800",
-  disabled: "shadow bg-gray1 text-white hover:bg-gray1 select-none",
-  "default-outline": "border border-blue-600 bg-white text-blue-600 hover:bg-blue-600 hover:text-white",
-  "p-outline": "border border-primary bg-white text-primary hover:bg-primary hover:text-white",
-  "s-outline": "border border-gray1 bg-white text-gray1 hover:bg-gray1 hover:text-white",
-  "success-outline": "border border-green-600 bg-white text-green-600 hover:bg-green-600 hover:text-white",
-  "d-outline": "border border-red-600 bg-white text-red-600 hover:bg-red-600 hover:text-white",
-  "dark-outline": "border border-gray-900 bg-white text-gray-900 hover:bg-gray-900 hover:text-white",
+  pb: "ui_btn_pb",
+  pob: "ui_btn_pob",
+  sob: "ui_btn_sob",
+  "suc-b": "ui_btn_suc-b",
+  "suc-ob": "ui_btn_suc-ob",
+  wb: "ui_btn_wb",
+  wob: "ui_btn_wob",
+  db: "ui_btn_db",
+  dob: "ui_btn_dob",
+  dab: "ui_btn_dab",
+  daob: "ui_btn_daob",
+  disabled: "ui_btn_disabled",
+  hollow: "ui_btn_hollow",
+  light: "ui_btn_light",
+  link: "ui_btn_link",
 };
 
 const BUTTON_SIZE_MAPS: BUTTON_SIZE_MAPS_PROPS = {
-  xs: "p-1 w-1",
-  auto: "p-2 w-auto",
-  sm: "p-1.5 w-4",
-  base: "p-1.5 w-12",
-  lg: "p-2 w-24",
-  xl: "p-2.5 w-32",
-  xxl: "p-3 w-64",
-  exl: "p-6 w-96",
-  "90w": "p-1.5 w-screen-90",
-  "75w": "p-1.5 w-screen-75",
-  "50w": "p-1.5 w-screen-50",
-  "80w": "p-1.5 w-screen-80",
-  full: "p-1.5 w-screen",
+  auto: "w-auto min-w-max",
+  "w-screen": "w-screen",
+  "w-full": "w-full",
+  "w-32": "w-32",
+  "w-36": "w-36",
+  "w-40": "w-40",
+  "w-44": "w-44",
+  "w-48": "w-48",
+  "w-52": "w-52",
+  "w-56": "w-56",
+  "w-60": "w-60",
+  "w-64": "w-64",
+  "w-72": "w-72",
+  "w-80": "w-80",
+  "w-96": "w-96",
 };
 
 const Button: React.FC<ButtonProps> = ({
   href = "",
-  variant = "default",
-  fontsize = "base",
+  variant = "pb",
   size = "auto",
   iconPosition = "",
   icon = false,
-  css,
+  css = "",
   children,
   textTransform = "normal-case",
   target = "_blank",
+  borderRadius = "rounded-sm",
+  hollow = false,
   ...props
 }) => {
   return (
@@ -131,16 +146,18 @@ const Button: React.FC<ButtonProps> = ({
         <a
           href={href}
           target={target}
+          rel="noreferrer"
           className={cn(
-            "ui_btn",
+            "font-sans items-center align-middle text-center cursor-pointer ease-in-out select-none p-2 h-auto overflow-clip",
             BUTTON_VARIANT_MAPS[variant],
+            css,
             BUTTON_SIZE_MAPS[size],
-            `text-${fontsize}`,
+            `${borderRadius}`,
             icon ? `inline-flex flex-row justify-${iconPosition}` : "",
             icon && iconPosition === "center-text-right-icon" ? `justify-between ui_btn_svg` : "",
             icon && iconPosition === "center-text-left-icon" ? `justify-between ui_btn_svg` : "",
             textTransform && `${textTransform}`,
-            css
+            hollow && "ui_btn_hollow"
           )}
           {...props}
         >
@@ -150,10 +167,11 @@ const Button: React.FC<ButtonProps> = ({
         <button
           type="button"
           className={cn(
-            "ui_btn",
+            "font-sans items-center align-middle text-center cursor-pointer ease-in-out select-none p-2 h-auto overflow-clip",
             BUTTON_VARIANT_MAPS[variant],
+            css,
             BUTTON_SIZE_MAPS[size],
-            `text-${fontsize}`,
+            `${borderRadius}`,
             icon ? `inline-flex flex-row justify-${iconPosition}` : "",
             icon && iconPosition === "center-text-left-icon"
               ? `group inline-flex items-center py-2 px-4 bg-amber-500 text-white font-semibold rounded-lg shadow-md focus:bg-amber-600 focus:outline-none`
@@ -162,7 +180,7 @@ const Button: React.FC<ButtonProps> = ({
               ? `group inline-flex items-center py-2 px-4 bg-amber-500 text-white font-semibold rounded-lg shadow-md focus:bg-amber-600 focus:outline-none`
               : "",
             textTransform && `${textTransform}`,
-            css
+            hollow && "ui_btn_hollow"
           )}
           {...props}
         >

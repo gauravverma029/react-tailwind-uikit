@@ -15,7 +15,189 @@ You can install react-tailwind-uikit with [NPM](https://www.npmjs.com/package/re
 
 For Basic Configuration in your project follow these steps [Installing Steps](https://tailwindcss.com/docs/installation) According to your next js or react js Project
 
+### Update Tailwind Config File (tailwind.config.js)
+
+```
+module.exports = {
+  black: "#000000",
+  white: "#FFFFFF",
+  gray: {
+    900: "#212121",
+    800: "#383838",
+    700: "#484848",
+    600: "#616161",
+    500: "#818181",
+    400: "#B2B2B2",
+    300: "#D2D2D2",
+    200: "#EBEBEB",
+    100: "#F1F1F1",
+    50: "#F7F7F7",
+  },
+  primary: {
+    1000: "#385470",
+    900: "#416282",
+    800: "#4A6E93",
+    700: "#537DA6",
+    600: "#5C8AB9",
+    500: "#6699CC",
+    400: "#84AAD5",
+    300: "#A0BDDE",
+    200: "#BCCFE8",
+    100: "#D7E2F1",
+    50: "#F1F5FA",
+  },
+  success: {
+    50: "#EBF9ED",
+    100: "#E2F6E5",
+    200: "#CFF1D5",
+    300: "#BDEBC4",
+    400: "#AAE5B4",
+    500: "#2BC049",
+    600: "#3e9550",
+    700: "#679A72",
+    800: "#52795A",
+    900: "#3D5A43",
+    1000: "#293d2d",
+  },
+  danger: {
+    50: "#FEF2F1",
+    100: "#FFDAD6",
+    200: "#FFC3BC",
+    300: "#FFAAA1",
+    400: "#FF9087",
+    500: "#FD746C",
+    600: "#D5625B",
+    700: "#AF504B",
+    800: "#89403B",
+    900: "#66302C",
+    1000: "#45201e",
+  },
+  warning: {
+    50: "#FEFCEE",
+    100: "#FFF8D1",
+    200: "#FFF4B4",
+    300: "#FFF095",
+    400: "#FFEC76",
+    500: "#FDE74C",
+    600: "#DDCA43",
+    700: "#BEAD3A",
+    800: "#9F9130",
+    900: "#827628",
+    1000: "#665d1f",
+  },
+};
+
+
+```
+
+```
+const colors = require("./colors");
+
+module.exports = {
+  future: {
+    purgeLayersByDefault: true,
+    applyComplexClasses: true,
+  },
+  purge: {
+    content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
+    options: {
+      safelist: {
+        standard: ["outline-none"],
+      },
+    },
+  },
+  theme: {
+    fontFamily: {
+      sans: [
+        "Roboto",
+        "sans-serif",
+        "ui-sans-serif",
+        "system-ui",
+        " -apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Helvetica Neue",
+        "Arial",
+        "Noto Sans",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+    },
+    extend: {
+      screens: {
+        extends: {
+          xsm: "320px",
+          "2xl": "1440px",
+          "3xl": "1920px",
+          "4xl": "2560px",
+          range: { min: "500px", max: "700px" },
+        },
+      },
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        white: colors.white,
+        black: colors.black,
+        gray: colors.gray,
+        primary: colors.primary,
+        success: colors.success,
+        danger: colors.danger,
+        warning: colors.warning,
+      },
+      spacing: {
+        0: "0px",
+        px: "1px",
+        0.5: "2px",
+        1: "4px",
+        1.5: "6px",
+        2: "8px",
+        2.5: "10px",
+        3: "12px",
+        3.5: "14px",
+        4: "16px",
+        5: "20px",
+        6: "24px",
+        7: "28px",
+        8: "32px",
+        9: "36px",
+        10: "40px",
+        11: "44px",
+        12: "48px",
+        14: "56px",
+        16: "64px",
+        18: "72",
+        20: "80px",
+        24: "96px",
+        28: "112px",
+        32: "128px",
+        36: "144px",
+        40: "160px",
+        44: "176px",
+        48: "192px",
+        52: "208px",
+        56: "224px",
+        60: "240px",
+        64: "256px",
+        72: "288px",
+        80: "320px",
+        96: "384px",
+      },
+      maxWidth: (theme) => ({
+        ...theme("spacing"),
+      }),
+      minHeight: (theme) => ({
+        ...theme("spacing"),
+      }),
+    },
+  },
+};
+
+```
+
 Then Simple Example will take for Button
+
 ```
 import { Button } from "react-tailwind-uikit";
 

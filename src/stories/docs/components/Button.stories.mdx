@@ -15,16 +15,15 @@ import { Button, ButtonProps } from "../../../index";
 
 <br />
 <div className="doc-story">
-  <Button variant='dark-outline'>Submit</Button>
+  <Button variant="dark-outline">Submit</Button>
 </div>
 <br />
 
 <br />
 <div className="doc-story">
-  <Button variant='danger'>Submit</Button>
+  <Button variant="danger">Submit</Button>
 </div>
 <br />
-
 
 ## Quick Start
 
@@ -34,24 +33,22 @@ will automatically configure itself with the default options exposed via `props`
 ```jsx
 import { Button } from "react-tailwind-uikit";
 
-export default () => (
-    <Button>Submit</Button>
-);
+export default () => <Button>Submit</Button>;
 ```
 
 ## With Different variant
+
 use different variant check api props for this
+
 ```jsx
 import { Button } from "react-tailwind-uikit";
 
-export default () => (
-    <Button variant='secondary'>Submit</Button>
-);
+export default () => <Button variant="secondary">Submit</Button>;
 ```
 
 ## With SVG icon Example
-```jsx
 
+```jsx
 import { Button } from "react-tailwind-uikit";
 const WithLeftSvgComponent = () => {
   return (
@@ -115,7 +112,7 @@ export default () => (
 
 export default () => (
   <div>
-    <Button  icon>
+    <Button icon>
       <WithRightSvgComponent />
     </Button>
   </div>
@@ -123,12 +120,11 @@ export default () => (
 
 export default () => (
   <div>
-    <Button  icon>
+    <Button icon>
       <BothSideSvgComponent />
     </Button>
   </div>
 );
-
 ```
 
 <br />
@@ -138,7 +134,5 @@ export default () => (
 <br />
 
 ## API
-
-### [Button](https://github.com/reaviz/reaviz/blob/master/src/AreaChart/AreaChart.tsx)
 
 <ArgsTable of={Button} />
